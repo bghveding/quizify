@@ -1,0 +1,17 @@
+{
+    "AppName" : "Quizify",
+    "BundleIdentifier" : "quizify",
+    "RequiredInterface" : 1,
+    "BundleType"    : "Application",
+    "AppDescription": "John",
+    "AppIcon": {
+    	"18x18" : "small.png",
+    	"64x64" : "medium.png",
+    	"128x128" : "large.png"
+    },
+    "VendorIdentifier" : "aparte.kluss",
+    "RequiredPermissions": [
+        "http://ws.audioscrobbler.com",
+        "http://ws.spotify.com"
+    ]
+}

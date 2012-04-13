@@ -1,0 +1,6 @@
+<h3><%= question.decodeForText() %></h3>
+<ul class="alternatives">
+	<% _.each(alternatives, function(alternative, key) { %>
+		<li class="alternative" data-alternative-idx="<%= key %>"><%= alternative.label %></li>
+	<% }); %>
+</ul>

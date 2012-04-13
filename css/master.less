@@ -1,0 +1,150 @@
+.rounded-corners (@radius: 5px) {
+	border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+}
+
+.text-shadow(@color: #ccc) {
+  text-shadow: 1px 1px 0px @color;
+}
+
+
+.box-shadow (@radius: 3px, @color: #888) {
+  -moz-box-shadow: 0px 0px @radius @color;
+  -webkit-box-shadow: 0px 0px @radius @color;
+  box-shadow: 0px 0px @radius @color;
+}
+
+// Colors
+// 
+
+@green: #82b919;
+@teal: #19b9b7;
+@blue: #0993c7;
+@orange: #ff6000;
+
+/* Clearfix For modern browsers */
+.container:before,
+.container:after {
+    content:"";
+    display:table;
+}
+.container:after {
+    clear:both;
+}
+
+* {
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box; /* Safari */
+}
+
+body {
+	margin:10px;
+}
+
+#branding {
+	background-color: @teal;
+	height:50px;
+	margin:-10px;
+	text-align:center;
+
+	.box-shadow;
+}
+
+h1#app-title {
+	color:#f2f2f2;
+	font-size:34px;
+	display:block;
+	padding:15px;
+	line-height: 0.5;
+}
+
+#main-content {
+	margin-top:30px;
+
+	.question {
+		.rounded-corners;
+		text-align: center;
+		background:#fff;
+		border: 1px solid #e6e6e6;
+		width:50%;
+		padding:15px;
+		margin:0px auto;
+	}
+
+	.stats {
+		width:50%;
+		padding:15px;
+		margin:0px auto;
+		text-align:center;
+	}
+}
+
+.alternatives {
+	list-style-type:square;
+	list-style-position:inside;
+	text-align: center;
+	margin:0px auto;
+	width:70%;
+
+	.alternative {
+		display: block;
+		background-color: #f2f2f2;
+		margin:6px 0px;
+		.rounded-corners(3px);
+
+		&:hover {
+			background-color: @teal;
+			cursor: pointer;
+		}
+	}
+}
+
+#timer, #text-answer {
+	margin-bottom:12px;
+}
+
+#timer {
+	font-weight:bold;
+}
+
+/* 
+STATS 
+-----*/
+
+.points, .level { color: #468847; font-weight: bold;}
+
+/*
+Question alternatives/answers
+----------------------------*/
+
+.answers li {
+	margin-bottom:6px;
+}
+
+.label, .answers li {
+	padding: 1px 4px 2px;
+	font-size: 10.998px;
+	font-weight: bold;
+	line-height: 13px;
+	color: white;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	background-color: #999;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.label-success {
+	background-color: #468847;
+}
+
+.answers li.label-success {
+	background-color: #468847 !important;
+}
+
+.label-important {
+	background-color: #B94A48;
+}
