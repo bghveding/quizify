@@ -4,7 +4,7 @@ Quizify is a music quiz app that uses the Spotify App API(https://developer.spot
 
 Quizify is my first attempt at 
 
-* Using the Spotify App API
+* Using the Spotify App API-ish
 * Using Backbone.js
 * Using Require.js
 * Creating a single-page web app.
