@@ -1,4 +1,4 @@
-Quzifiy
+Quizifiy
 =======
 Quizify is a music quiz app that uses the Spotify App API(https://developer.spotify.com/technologies/apps/).
 
