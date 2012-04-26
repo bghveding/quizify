@@ -1,3 +1,5 @@
+# Taps into different APIs for music info.
+# @todo: Add a "type in members of band" questio. Could use musicbrainz API here.
 define ["jquery"], ($) -> 
 	class QuestionService
 		constructor: (@collection) ->
@@ -7,6 +9,7 @@ define ["jquery"], ($) ->
 			this.listArtistAlbums()
 			this.currentYear()
 
+		# Question about current track's year
 		currentYear: ->
 			track = @models.player.track
 			albumYear = track.album.year
@@ -19,7 +22,8 @@ define ["jquery"], ($) ->
 					{label: albumYear-2 },
 			]})
 
-		#@todo: Get albums from last.fm or something. Spotify only lists playable albums
+		# Gets albums of currently playing artist.
+		# @todo: Create a consistent alternatives structure.
 		listArtistAlbums: ->
 			track = @models.player.track
 			artist = track.artists[0]

@@ -1,15 +1,21 @@
-require(["jquery", 
-	"order!underscore-min", 
-	"order!underscore.string",
-	"order!backbone", 
-	"order!backbone.localStorage", 
-	"order!sf/application"], function($, tmp, ustring, tmp2, tmp3, appRouter) {
+require(
+	[
+		"require",
+		"jquery", 
+		"order!underscore.string",
+		"order!underscore-min", 
+		"order!backbone", 
+		"order!backbone.localStorage",
+	], 
+	function(require, $, ustring) {
     
     _.str = ustring;
     
-    new appRouter;
+    require(["sf/application"], function(appRouter) {
+	    new appRouter;
 
-    $(function() {
-        Backbone.history.start();
-    });
-});
+	    $(function() {
+	        Backbone.history.start();
+	    });
+    })
+	});
