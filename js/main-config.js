@@ -5,7 +5,7 @@ requirejs.config({
     'underscore': 'vendor/underscore-min',
     'underscore.string': 'vendor/underscore.string.min',
     'backbone': 'vendor/backbone',
-    'coffee-script': 'vendor/CoffeeScript',
+    'coffee-script': 'vendor/coffee-script',
   },
 
   shim: {
