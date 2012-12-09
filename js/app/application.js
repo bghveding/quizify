@@ -1,4 +1,4 @@
-define(['jquery', 'sf/views/home'], function($, HomeView){
+define(['jquery', 'app/views/home', 'backbone'], function($, HomeView, Backbone){
 
 	Backbone.View.prototype.close = function(){
 	  this.remove();

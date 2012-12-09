@@ -20,7 +20,7 @@ define ["jquery"], ($) ->
 					{label: albumYear, correct: true},
 					{label: albumYear-1 },
 					{label: albumYear-2 },
-			]})
+				]})
 
 		# Gets albums of currently playing artist.
 		# @todo: Create a consistent alternatives structure.

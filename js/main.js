@@ -2,16 +2,17 @@ require(
 	[
 		"require",
 		"jquery", 
-		"order!underscore.string",
-		"order!underscore-min", 
-		"order!backbone", 
-		"order!backbone.localStorage",
+		"underscore.string",
+		"underscore", 
+		"backbone", 
+		"vendor/bootstrap.min", 
+		"vendor/backbone.localStorage",
 	], 
-	function(require, $, ustring) {
+	function(require, $, _str) {
     
-    _.str = ustring;
+    _.str = _str;
     
-    require(["sf/application"], function(appRouter) {
+    require(["app/application"], function(appRouter) {
 	    new appRouter;
 
 	    $(function() {

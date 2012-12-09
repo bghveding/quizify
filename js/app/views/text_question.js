@@ -1,4 +1,4 @@
-define(['jquery', 'text!sf/templates/question_text.html'], function($, textQuestionTemplate) {
+define(['jquery', 'text!app/templates/question_text.html'], function($, textQuestionTemplate) {
 	return Backbone.View.extend({
 		timerLength: 35,
 

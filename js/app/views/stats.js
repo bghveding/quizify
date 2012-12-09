@@ -1,4 +1,4 @@
-define(['jquery', 'text!sf/templates/stats.html'], function($, statsTemplate) {
+define(['jquery', 'text!app/templates/stats.html'], function($, statsTemplate) {
 	return Backbone.View.extend({
 		template: _.template(statsTemplate),
 		points: 0,

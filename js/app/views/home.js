@@ -1,10 +1,10 @@
 define(["jquery", 
-		"text!sf/templates/home.html", 
-		'cs!sf/services/question_service',
-		"sf/collections/question_collection", 
-		"sf/views/stats", 
-		"sf/views/question",
-		"sf/views/text_question"], 
+		"text!app/templates/home.html", 
+		'cs!app/services/question_service',
+		"app/collections/question_collection", 
+		"app/views/stats", 
+		"app/views/question",
+		"app/views/text_question"], 
 		function($, homeTemplate, QuestionService, QuestionCollection, StatsView, QuestionView, TextQuestionView) {
 			return Backbone.View.extend({
 

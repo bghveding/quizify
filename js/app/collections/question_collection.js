@@ -1,4 +1,4 @@
-define(["jquery", "sf/models/question"], function($, Question) {
+define(["jquery", "app/models/question"], function($, Question) {
 
 	return Backbone.Collection.extend({
 		model: Question,

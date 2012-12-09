@@ -1,4 +1,4 @@
-define(['jquery', 'text!sf/templates/question.html'], function($, questionTemplate) {
+define(['jquery', 'text!app/templates/question.html'], function($, questionTemplate) {
 	return Backbone.View.extend({
 
 		events: {
