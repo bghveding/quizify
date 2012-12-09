@@ -1,24 +1,5 @@
-define(['jquery', 'app/views/home', 'backbone'], function($, HomeView, Backbone){
-
-	Backbone.View.prototype.close = function(){
-	  this.remove();
-	  this.unbind();
-	  if (this.onClose){
-	    this.onClose();
-	  }
-	}
-
-	var AppView = {};
-	AppView.showView = function(view) {
-	 	if (this.currentView){
-	      this.currentView.close();
-	    }
-
-	    this.currentView = view;
-	    this.currentView.render();
-
-	    $("#main-content").html(this.currentView.el);
-	}
+define(['jquery', 'app/views/home', 'backbone', 'cs!lib/view_container'], 
+	function($, HomeView, Backbone, ViewContainer){
 
 	var appRouter = Backbone.Router.extend({
 	
@@ -27,7 +8,7 @@ define(['jquery', 'app/views/home', 'backbone'], function($, HomeView, Backbone)
 		},
 
 		initialize: function() {
-			this.appView = AppView;
+			this.appView = new ViewContainer('#main-content');
 			sp.core.addEventListener('argumentsChanged', this.onArgsChange);
 		},
 

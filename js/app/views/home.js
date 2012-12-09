@@ -19,6 +19,7 @@ define(["jquery",
 
 					this.questionCollection = new QuestionCollection;
 					this.createQuiz();
+					this.render();
 				},
 
 				// Generates quiz questions
