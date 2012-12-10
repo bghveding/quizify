@@ -10,4 +10,4 @@ define ["jquery"], ($) ->
 
       @currentView = view
 
-      this.$targetEl.html(this.currentView.el);
+      this.$targetEl.html(@currentView.el)
