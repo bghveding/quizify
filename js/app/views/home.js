@@ -46,8 +46,8 @@ define(["jquery",
 
       render: function() {
         this.$el.html(homeTemplate);
-        this.questionEl = this.$('.question');
-        this.statsView = new StatsView({ el: this.$(".stats") });
+        this.questionEl = this.$el.find('.question');
+        this.statsView = new StatsView({ el: this.$el.find(".stats") });
         
         this.addQuestion();
 

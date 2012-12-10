@@ -15,7 +15,7 @@ define(['jquery', 'text!app/templates/question_text.html'], function($, textQues
       this.$el.html(this.template(this.model.toJSON()));
       
       var that = this;
-      this.timerEl = this.$('#timer').text(this.timerLength);
+      this.timerEl = this.$el.find('#timer').text(this.timerLength);
       setTimeout(function() { that.startTimer(); console.log("GO!"); }, 3000);
 
       return this;
@@ -30,7 +30,7 @@ define(['jquery', 'text!app/templates/question_text.html'], function($, textQues
       if(correct = this.model.isCorrectTextAnswer($input.val())) 
       {
         this.trigger('answer');
-        this.$('.answers').append('<li class="label-success">' + correct.album.name + '</li>');
+        this.$el.find('.answers').append('<li class="label-success">' + correct.album.name + '</li>');
       }
 
       $input.val('');

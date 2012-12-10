@@ -35,13 +35,13 @@ define(['jquery', 'text!app/templates/stats.html'], function($, statsTemplate) {
       }
 
       progress = Math.round((this.points / cap) * 100);
-      this.$('.progress .bar').css({ 'width' : progress +'%' });
+      this.$el.find('.progress .bar').css({ 'width' : progress +'%' });
     },
 
     updatePoints: function(points) {
       this.points += points;
       this.calculateLevel();
-      this.$('.level').text(this.level);
+      this.$el.find('.level').text(this.level);
     }
   });
 });
